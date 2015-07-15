@@ -17,6 +17,30 @@ public class GoalFinder {
 	public float goalLocationLeftMax = 0;
 	public float goalLocationRightMax = 0;
 	
+	public SensorMode getBaseDir() {
+		return baseDir;
+	}
+
+	public float[] getVals() {
+		return vals;
+	}
+
+	public SampleProvider getAverageDir() {
+		return averageDir;
+	}
+
+	public float getGoalLocation() {
+		return goalLocation;
+	}
+
+	public float getGoalLocationLeftMax() {
+		return goalLocationLeftMax;
+	}
+
+	public float getGoalLocationRightMax() {
+		return goalLocationRightMax;
+	}
+
 	public GoalFinder(SensorMode compassMode,SoccerMotorMotion motor) {
 		baseDir = compassMode;
 		roboMotor = motor;

@@ -30,7 +30,47 @@ public class BallFinder {
 	private boolean atBall = false;
 	private boolean goToBall = false;
 	private GoalFinder goalFinder;
+
+	public SampleProvider getDistance() {
+		return distance;
+	}
+
+	public void setDistance(SampleProvider distance) {
+		this.distance = distance;
+	}
+
+	public boolean isBallFound() {
+		return ballFound;
+	}
+
+	public void setBallFound(boolean ballFound) {
+		this.ballFound = ballFound;
+	}
+
+	public boolean isAtBall() {
+		return atBall;
+	}
+
+	public void setAtBall(boolean atBall) {
+		this.atBall = atBall;
+	}
+
+	public float getBallInFrontDistance() {
+		return ballInFrontDistance;
+	}
+
+	public float getObjectDetectedDistance() {
+		return objectDetectedDistance;
+	}
 	
+	public boolean isSearchMode() {
+		return searchMode;
+	}
+
+	public void setSearchMode(boolean searchMode) {
+		this.searchMode = searchMode;
+	}
+
 	public BallFinder(GoalFinder newGoalFinder, Port touchPort,Port sonarPort, SoccerMotorMotion newRoboMotor){
 		sonarSensor = new EV3UltrasonicSensor(sonarPort);
 		distance= sonarSensor.getDistanceMode();
