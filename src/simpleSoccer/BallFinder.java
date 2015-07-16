@@ -31,6 +31,10 @@ public class BallFinder {
 	private boolean goToBall = false;
 	private GoalFinder goalFinder;
 
+	public float[] getSample() {
+		return sample;
+	}
+
 	public SampleProvider getDistance() {
 		return distance;
 	}
